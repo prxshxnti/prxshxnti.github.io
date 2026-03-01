@@ -1,0 +1,153 @@
+---
+layout: default
+---
+<style>
+  .post-header {
+    padding: 3.5rem 0 2.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+  }
+  .post-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .post-date-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  h1.post-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+  }
+
+  .post-body { padding-bottom: 5rem; }
+  .post-body p { margin-bottom: 1.5rem; }
+  .post-body h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 2.8rem 0 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .post-body h3 { font-size: 1.1rem; font-weight: 500; margin: 2rem 0 0.4rem; }
+
+  .post-body a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s;
+  }
+  .post-body a:hover { text-decoration-color: var(--accent); }
+
+  .post-body code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78em;
+    background: #ede7dc;
+    color: #7a3010;
+    padding: 0.12em 0.38em;
+    border-radius: 3px;
+  }
+  .post-body pre {
+    background: #1c1a18;
+    color: #cec8c0;
+    padding: 1.4rem 1.6rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    font-size: 0.8rem;
+    line-height: 1.65;
+    border-left: 3px solid var(--accent);
+  }
+  .post-body pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  .post-body figure { margin: 2.5rem 0; }
+  .post-body img { max-width: 100%; display: block; border-radius: 4px; }
+  .post-body figcaption {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+
+  .post-body blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 0.2rem 0 0.2rem 1.3rem;
+    margin: 2rem 0;
+    color: var(--muted);
+    font-style: italic;
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .post-body ul, .post-body ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+  .post-body li { margin-bottom: 0.35rem; }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    margin: 2rem 0 0;
+  }
+  .back-link:hover { color: var(--ink); }
+
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin: 2rem 0;
+  }
+  .post-body th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.6rem 1rem;
+    border-bottom: 1.5px solid var(--ink);
+    color: var(--muted);
+  }
+  .post-body td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .post-body tr:last-child td { border-bottom: none; }
+</style>
+
+<main class="container">
+
+  <div class="post-header">
+    <div class="post-header-meta">
+      <span class="post-date-label">{{ page.date | date: "%Y-%m-%d" }}</span>
+      {% for tag in page.tags %}
+        <span class="tag tag-{{ tag.color }}">{{ tag.name }}</span>
+      {% endfor %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </div>
+
+  <article class="post-body">
+    {{ content }}
+  </article>
+
+  <a class="back-link" href="/">← all posts</a>
+
+</main>

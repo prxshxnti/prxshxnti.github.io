@@ -1,0 +1,16 @@
+title: Prashanthi's Blog
+description: Writing about software, tools, and things I've figured out.
+url: "https://prxshxnti.github.io"
+
+# If your repo is username.github.io, baseurl is "".
+# If your repo is something like "blog", set baseurl: "/blog"
+baseurl: ""
+
+permalink: /posts/:slug
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

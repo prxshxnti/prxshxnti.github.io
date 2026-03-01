@@ -1,0 +1,137 @@
+---
+layout: default
+title: About
+---
+<style>
+  .page-header {
+    padding: 3.5rem 0 2.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+  }
+  .page-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+  }
+
+  .about-body p { margin-bottom: 1.5rem; }
+  .about-body a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s;
+  }
+  .about-body a:hover { text-decoration-color: var(--accent); }
+
+  .about-section {
+    margin-top: 2.8rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .now-list { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+  .now-list li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    font-size: 1rem;
+  }
+  .now-list li:first-child { border-top: 1px solid var(--border); }
+  .now-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    position: relative;
+    top: -2px;
+  }
+
+  .links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 4rem;
+  }
+  .link-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.15s;
+  }
+  .link-chip:hover { background: var(--border); }
+  .link-chip.email { background: #fde9d4; border-color: #f4c8a8; color: #b84010; }
+  .link-chip.email:hover { background: #f4c8a8; }
+</style>
+
+<main class="container">
+
+  <div class="page-header">
+    <div class="page-label">about</div>
+    <h1>Prashanthi Ramesh</h1>
+  </div>
+
+  <div class="about-body">
+
+    <p>
+      Hi — I'm a Data scientist based in Chennai, India. I work mostly on
+      solving business problems using AI and building solutions. Apart from this I am highly interested in
+      Deep neural networks and currently exploring convolutions and recurrent networks.
+    </p>
+
+    <p>
+      I write here about things I've figured out, tools I find useful,
+      and occasionally longer thoughts on building software. Posts are
+      mostly for my own record-keeping — if they're useful to you too,
+      that's a bonus.
+    </p>
+
+    <div class="about-section">
+      <div class="section-label">now</div>
+      <ul class="now-list">
+        <li><span class="now-dot"></span>Working on Sequence to Sequence architecture</li>
+        <li><span class="now-dot"></span>Reading Hands - On machine learning Book [ Must read ]</li>
+        <li><span class="now-dot"></span>Learning Embeddings, Tokenizer and some other cool stuff</li>
+      </ul>
+      <p style="font-size:0.85rem; color:var(--muted); font-style:italic;">
+        Updated Feb 2026
+      </p>
+    </div>
+
+    <div class="about-section">
+      <div class="section-label">find me</div>
+      <div class="links-row">
+        <a class="link-chip email" href="mailto:prashantiramesh3@gmail.com">prashantiramesh3@gmail.com</a>
+        <a class="link-chip" href="https://github.com/prxshxnti">github</a>
+        <a class="link-chip" href="https://x.com/PrashantiR18871">twitter / x</a>
+        <a class="link-chip" href="https://www.linkedin.com/in/prashanti-ramesh-580896225/">linkedin</a>
+      </div>
+    </div>
+
+  </div>
+
+</main>

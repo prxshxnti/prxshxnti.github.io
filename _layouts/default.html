@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}Prashanthi's Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #faf6f0;
+      --ink: #1a1714;
+      --muted: #8a8075;
+      --border: #e2dbd0;
+      --accent: #d0541e;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 19px;
+      line-height: 1.78;
+      min-height: 100vh;
+    }
+
+    .container { max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.2rem 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1.5px solid var(--ink);
+    }
+
+    .site-name { font-size: 1rem; font-weight: 500; letter-spacing: 0.08em; text-transform: lowercase; }
+    .site-name a { text-decoration: none; color: inherit; }
+
+    nav { display: flex; gap: 0.2rem; }
+    nav a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    nav a:hover, nav a.active { color: var(--ink); border-color: var(--border); }
+
+    /* Tags */
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.04em;
+      padding: 0.18rem 0.6rem;
+      border-radius: 3px;
+    }
+    .tag-green  { background: #e4f5d4; color: #2e6b10; }
+    .tag-orange { background: #fde9d4; color: #b84010; }
+    .tag-blue   { background: #d8eeff; color: #1448a0; }
+    .tag-purple { background: #f0e4ff; color: #6120a8; }
+    .tag-teal   { background: #d4f5ef; color: #0e6b58; }
+    .tag-rose   { background: #fde4ec; color: #b01048; }
+
+    footer {
+      border-top: 1.5px solid var(--ink);
+      padding: 1.5rem 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <span class="site-name"><a href="/">Prashanthi's Blog</a></span>
+    <nav>
+      <a href="/about.html" {% if page.url == '/about.html' %}class="active"{% endif %}>about</a>
+      <a href="https://github.com/prxshxnti">github</a>
+        <a href="../index.html">Home</a>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer>Work of a AI researcher</footer>
+
+</body>
+</html>
