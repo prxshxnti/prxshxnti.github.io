@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Attention mechanisms"
-date: 2026-02-22
+date: 2026-03-17
 excerpt: "Implemented popular attention variants in pytorch"
 tags:
   - name: Deep Learning
