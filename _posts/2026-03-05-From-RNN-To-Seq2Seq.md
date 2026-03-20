@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From RNN to Seq2Seq"
-date: 2026-03-18
+date: 2026-03-05
 excerpt: "Covering all architectural advancements from RNN to Sequence-2-Sequence Model"
 tags:
   - name: Deep Learning
@@ -23,7 +23,7 @@ FC Network expects inputs in fixed size, we can't always give sentences in fixed
 This concept was introduced to make the neuron remember previous words. 
 
 <figure>
-  <img src="/images/rnn_equation.png" alt="RNN Equation">
+  <img src="/images/rnn-2-sequence/rnn_equation.png" alt="RNN Equation">
   <figcaption>RNN Equation</figcaption>
 </figure>
 

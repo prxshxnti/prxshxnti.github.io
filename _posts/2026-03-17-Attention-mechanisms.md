@@ -62,7 +62,7 @@ The way Bahdanau developed this context vector(ct) is given below :
 
 
 <figure>
-  <img src="/images/bahdanau_additive.png" alt="Bahdanau Additive Attention Implementation ">
+  <img src="/images/attention-mechanisms/bahdanau_additive.png" alt="Bahdanau Additive Attention Implementation ">
   <figcaption>Bahdanau Additive Attention Implementation</figcaption>
 </figure>
 
@@ -148,7 +148,7 @@ We concatenate the embedding information and context information is to preserve 
 In the paper [Neural Machine Translation by Bahdanau](https://arxiv.org/pdf/1409.0473), he has concatenated the encoder outputs and decoder previous hidden vector. 
 
 <figure>
-  <img src="/images/bahdanau_concatenation.png" alt="Bahdanau Concatenative Attention Implementation ">
+  <img src="/images/attention-mechanisms/bahdanau_concatenation.png" alt="Bahdanau Concatenative Attention Implementation ">
   <figcaption>Bahdanau Concatenative Attention Implementation</figcaption>
 </figure>
 
@@ -168,7 +168,7 @@ Luong has provided his own set of approaches in his paper [Effective Approaches 
 For Luong dot attention, he has established the following equations, 
 
 <figure>
-  <img src="/images/luong_dot.png" alt="Luong Dot Attention Implementation ">
+  <img src="/images/attention-mechanisms/luong_dot.png" alt="Luong Dot Attention Implementation ">
   <figcaption>Luong Dot Attention Implementation</figcaption>
 </figure>
 
@@ -247,7 +247,7 @@ For example, in our case, the encoder hidden size must match the decoder hidden 
 For same hidden sizes, Luong dot attention is the best approach and for different hidden size, Luong General attention is the best approach. 
 
 <figure>
-  <img src="/images/luong_general.png" alt="Luong General Attention Implementation ">
+  <img src="/images/attention-mechanisms/luong_general.png" alt="Luong General Attention Implementation ">
   <figcaption>Luong General Attention Implementation</figcaption>
 </figure>
 
@@ -314,7 +314,7 @@ class ReverseTaskV7(nn.Module):
 This approach is very similar to Bahdanua concatenative attention and the single difference is Luong uses current hidden state and Bahdanu used previous hidden state. 
 
 <figure>
-  <img src="/images/luong_concat.png" alt="Luong Concat Attention Implementation ">
+  <img src="/images/attention-mechanisms/luong_concat.png" alt="Luong Concat Attention Implementation ">
   <figcaption>Luong Concat Attention Implementation</figcaption>
 </figure>
 

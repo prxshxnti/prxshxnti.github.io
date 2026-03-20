@@ -266,7 +266,7 @@ plt.show()
 ```
 
 <figure>
-  <img src="/images/acc_loss_plots.png" alt="Loss and Accuracy curves">
+  <img src="/images/sentiment-classification/acc_loss_plots.png" alt="Loss and Accuracy curves">
   <figcaption>Loss and Accuracy curves.</figcaption>
 </figure>
 
@@ -387,10 +387,10 @@ if st.button("Predict"):
 
 Positive sentiment case: 
 
-<img src="/images/positive.png" />
+<img src="/images/sentiment-classification/positive.png" />
 
 Negative sentiment case: 
 
-<img src="/images/negative.png" />
+<img src="/images/sentiment-classification/negative.png" />
 
 Finally I would like to end with the limitations of my model. If we give words outside of my vocabulary( there are only 66 words in my vocab )then the prediction is inaccuracte.
