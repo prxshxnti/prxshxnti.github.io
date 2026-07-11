@@ -79,7 +79,7 @@ One way to solve this problem is to inject the positional meaning into our archi
 3. Encoder : If you look in our paper, figure 1, Encoder is combination of multi-head self attention and feed forward network. We also have residual connections and normalization layers placed after both of these blocks. 
 - The purpose of residual connections, is to remember the original signal before the transformation and learn the necessary changes to apply on original signal and produce output. Without this, we would give original signal and ask the model to build output from scratch. 
 Think of it like this, inputs are the hint to generate outputs, tweaking inputs will give us outputs and that is what we are trying to achieve in skip/residual connections
-- The purpose of layer norm, is to control the signals from getting too large, too small or unstable across layers. 
+- The purpose of layer norm, is to control the signals from getting too large, too small or unstable across layers. More technically, The distribution (mean and variance) of values can shift during training and we are rescaling it back to the right distribution is what layer norm does
 We will look closely on multi-head attention and feed forward in later parts. 
 4. Decoder : Decoder is the combination of masked multi-head self attention, multi head cross attention and feed forward network. Decoder is made up of 3 small blocks with skip connections and layer norm interleaved. 
 5. Output Layer : This layer takes all the predictions of the decoder and map it to the vocabulary to get the maximum likelihood token and return that token as next word prediction.

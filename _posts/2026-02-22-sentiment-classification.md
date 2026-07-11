@@ -298,7 +298,7 @@ with torch.inference_mode():
         test_loss.append(loss.detach().item())
         test_acc.append(accuracy(y_batch, y_pred).item())
 
-print(f"Test Loss : {torch.tensor(test_loss).mean():.2f}, Test Accuracy : {torch.tensor(test_acc).mean():.2f}")
+print(f"LLM Loss : {torch.tensor(test_loss).mean():.2f}, LLM Accuracy : {torch.tensor(test_acc).mean():.2f}")
 
 torch.save(model.state_dict(), "model_weights.pth")
 with open('vocab.json', 'w') as f:
